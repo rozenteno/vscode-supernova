@@ -1,0 +1,23 @@
+values:
+  name: Supernova
+
+  color:
+    background: '#1b1d28'
+    foreground: '#a1a4b5'
+    comments: '#5d6177'
+    activityBar: '#1f2230'
+    sideBar: '#15171e'
+    statusBar: '#262a3a'
+    selection: '#292d3d'
+    lineNumber: '#3c4054'
+    scrollbar: '#3f435690'
+    scrollbarHover: '#50546d90'
+    scrollbarSelect: '#60668490'
+
+    red: '#c75d7a'
+    orange: '#c77d5f'
+    yellow: '#c6a165'
+    green: '#6ea066'
+    cyan: '#55a8b5'
+    blue: '#5d95cc'
+    purple: '#9574bf'

@@ -1,0 +1,296 @@
+name: '{{values.name}}'
+
+# Syntaxes
+tokenColors:
+  - settings:
+      foreground: '{{values.color.foreground}}'
+      background: '{{values.color.background}}'
+  - name: Comments, Vendored Properties
+    scope:
+      - comment
+      - punctuation.definition.comment
+      - support.type.vendored
+    settings:
+      foreground: '{{values.color.comments}}'
+  - name: Keywords, Storage, Primitive Types
+    scope:
+      - keyword
+      - variable.language
+      - storage.type
+      - storage.modifier
+    settings:
+      foreground: '{{values.color.purple}}'
+  - name: Functions, Special Methods, Tag braces, IDs, Embeds
+    scope:
+      - keyword.other.special-method
+      - support.function
+      - variable.function
+      - entity.name.function
+      - entity.other.attribute-name.id
+      - punctuation.definition.tag
+      - punctuation.section.embedded
+    settings:
+      foreground: '{{values.color.blue}}'
+  - name: Classes, Annotations, Attribute Names
+    scope:
+      - storage.type.annotation
+      - entity.other.attribute-name
+      - support.class
+      - support.type
+      - support.constant
+      - entity.name.type
+      - entity.other.inherited-class
+    settings:
+      foreground: '{{values.color.yellow}}'
+  - name: Numbers, Characters, Constants
+    scope:
+      - keyword.other.unit
+      - constant.numeric
+      - constant.character
+      - constant.language
+    settings:
+      foreground: '{{values.color.orange}}'
+  - name: Strings, Packages, Namespaces
+    scope:
+      - string
+      - entity.name.type.namespace
+      - storage.modifier.import
+      - storage.modifier.package
+    settings:
+      foreground: '{{values.color.green}}'
+  - name: Constant Variables, Other Variables
+    scope:
+      - variable.other
+      - variable.parameter
+      - support.other.variable
+      - support.variable.property
+    settings:
+      foreground: '{{values.color.red}}'
+  - name: User Defined Variables
+    scope:
+      - variable.other.readwrite
+      - support.variable.property
+    settings:
+      foreground: '{{values.color.foreground}}'
+  - name: Operators, Escape Chars, Regex, Colors
+    scope:
+      - keyword.operator
+      - string.regexp
+      - constant.character.escape
+      - constant.other.color
+    settings:
+      foreground: '{{values.color.cyan}}'
+  - name: Tags, JSON Property Names
+    scope:
+      - entity.name.tag
+      - source.json support.type.property-name
+    settings:
+      foreground: '{{values.color.purple}}'
+  - name: Blockquotes
+    scope:
+      - markup.quote
+    settings:
+      foreground: '{{values.color.comments}}'
+  - name: Link Titles, Link Descriptions
+    scope:
+      - string.other.link.description.markdown
+      - string.other.link.title.markdown
+    settings:
+      foreground: '{{values.color.blue}}'
+  - name: URLs
+    scope:
+      - markup.underline.link
+    settings:
+      foreground: '{{values.color.red}}'
+  - name: Headings
+    scope:
+      - markup.heading.markdown
+    settings:
+      foreground: '{{values.color.green}}'
+  - name: Inlined Text, Fenced code
+    scope:
+      - markup.inline.raw
+      - markup.fenced_code.block
+    settings:
+      foreground: '{{values.color.cyan}}'
+  - name: Deleted Items
+    scope:
+      - markup.deleted
+    settings:
+      foreground: '{{values.color.red}}'
+  - name: Added Items
+    scope:
+      - markup.inserted
+    settings:
+      foreground: '{{values.color.green}}'
+  - name: Modified Items
+    scope:
+      - markup.changed
+    settings:
+      foreground: '{{values.color.yellow}}'
+  - name: Lists
+    scope:
+      - beginning.punctuation.definition.list
+    settings:
+      foreground: '{{values.color.orange}}'
+  - name: Bold
+    scope:
+      - markup.bold
+    settings:
+      foreground: '{{values.color.purple}}'
+  - name: Italics
+    scope:
+      - markup.italic
+    settings:
+      foreground: '{{values.color.yellow}}'
+  - name: CSS -- Property Names
+    scope:
+      - source.css support.type.property-name
+    settings:
+      foreground: '{{values.color.foreground}}'
+  - name: CSS - Constants
+    scope:
+      - source.css support.constant
+    settings:
+      foreground: '{{values.color.orange}}'
+  - name: SCSS -- Variables
+    scope:
+      - variable.scss
+    settings:
+      foreground: '{{values.color.red}}'
+  - name: PHP -- Documentation
+    scope:
+      - keyword.other.phpdoc
+    settings:
+      foreground: '{{values.color.cyan}}'
+
+# Interface
+colors:
+  # Workbench components
+  foreground: '{{values.color.foreground}}'
+  focusBorder: '{{values.color.blue}}'
+  button.background: '{{values.color.lineNumber}}'
+  button.foreground: '{{values.color.foreground}}'
+  debugToolBar.background: '{{values.color.activityBar}}'
+  pickerGroup.foreground: '{{value.color.purple}}'
+  pickerGroup.border: '{{values.color.blue}}'
+
+  list.activeSelectionBackground: '{{values.color.lineNumber}}'
+  list.activeSelectionForeground: '{{values.color.foreground}}'
+  list.inactiveSelectionBackground: '{{values.color.selection}}'
+  list.focusBackground: '{{values.color.selection}}'
+  list.hoverBackground: '{{values.color.selection}}90'
+  list.dropBackground: '{{values.color.selection}}'
+  list.highlightForeground: '{{values.color.blue}}'
+
+  scrollbarSlider.background: '{{values.color.scrollbar}}'
+  scrollbarSlider.hoverBackground: '{{values.color.scrollbarHover}}'
+  scrollbarSlider.activeBackground: '{{values.color.scrollbarSelect}}'
+
+  panel.background: '{{values.color.background}}'
+  panel.border: '{{values.color.selection}}'
+  panelTitle.activeBorder: '{{values.color.blue}}'
+  panelTitle.activeForeground: '{{values.color.foreground}}'
+  panelTitle.inactiveForeground: '{{values.color.comments}}'
+  dropdown.background: '{{values.color.statusBar}}'
+  dropdown.foreground: '{{values.color.foreground}}'
+  notification.background: '{{values.color.selection}}'
+  notification.foreground: '{{values.color.foreground}}'
+
+  input.background: '{{values.color.activityBar}}'
+  input.foreground: '{{values.color.foreground}}'
+  input.border: '{{values.color.lineNumber}}'
+  inputOption.activeBorder: '{{values.color.comments}}'
+  inputValidation.infoBorder: '{{values.color.green}}'
+  inputValidation.warningBorder: '{{values.color.yellow}}'
+  inputValidation.errorBorder: '{{values.color.red}}'
+
+  # Title Bar -- (Values only applied on MacOS)
+  titleBar.activeBackground: '{{values.color.statusBar}}'
+  titleBar.activeForeground: '{{values.color.foreground}}'
+  titleBar.inactiveBackground: '{{values.color.activityBar}}'
+  titleBar.inactiveForeground: '{{values.color.comments}}'
+
+  # Side Bar
+  sideBar.background: '{{values.color.sideBar}}'
+  sideBarTitle.foreground: '{{values.color.foreground}}'
+  sideBarSectionHeader.background: '{{values.color.activityBar}}'
+
+  # Status Bar
+  statusBar.background: '{{values.color.statusBar}}'
+  statusBar.foreground: '{{values.color.foreground}}'
+  statusBar.noFolderBackground: '{{values.color.statusBar}}'
+  statusBar.debuggingBackground: '{{values.color.red}}90'
+
+  # Activity Bar
+  activityBar.background: '{{values.color.activityBar}}'
+  activityBar.foreground: '{{values.color.foreground}}'
+  activityBarBadge.background: '{{values.color.blue}}'
+  activityBarBadge.foreground: '{{values.color.activityBar}}'
+  activityBar.dropBackground: '{{values.color.selection}}'
+
+  # Editor
+  editor.background: '{{values.color.background}}'
+  editor.foreground: '{{values.color.foreground}}'
+  editor.selectionBackground: '{{values.color.selection}}'
+  editor.rangeHighlightBackground: '{{values.color.blue}}30'
+  editor.findMatchBackground: '{{values.color.green}}55'
+  editor.findMatchHighlightBackground: '{{values.color.lineNumber}}'
+  editor.hoverHighlightBackground: '{{values.color.selection}}e0'
+  editor.selectionHighlightBackground: '{{values.color.lineNumber}}'
+  editor.wordHighlightBackground: '{{values.color.blue}}55'
+  editor.wordHighlightStrongBackground: '{{values.color.green}}55'
+  editorGroupHeader.tabsBackground: '{{values.color.sideBar}}'
+  editorGroup.border: '{{values.color.selection}}'
+  editorGroup.background: '{{values.color.statusBar}}'
+  editorLineNumber.foreground: '{{values.color.lineNumber}}'
+  editorCursor.foreground: '{{values.color.foreground}}'
+  editorIndentGuide.background: '{{values.color.selection}}'
+  editorWhitespace.foreground: '{{values.color.selection}}'
+  editor.lineHighlightBackground: '{{values.color.activityBar}}'
+  editorWidget.background: '{{values.color.sideBar}}'
+  editorHoverWidget.background: '{{values.color.activityBar}}'
+  editorHoverWidget.border: '{{values.color.lineNumber}}'
+  editorSuggestWidget.background: '{{values.color.activityBar}}'
+  editorSuggestWidget.foreground: '{{values.color.foreground}}'
+  editorSuggestWidget.border: '{{values.color.lineNumber}}'
+  editorSuggestWidget.selectedBackground: '{{values.color.selection}}'
+  editorSuggestWidget.highlightForeground: '{{values.color.blue}}'
+
+  # Tabs
+  tab.activeForeground: '{{values.color.foreground}}'
+  tab.inactiveForeground: '{{values.color.comment}}'
+  tab.inactiveBackground: '{{values.color.activityBar}}'
+  tab.border: '{{values.color.background}}'
+
+  # Peek View
+  peekViewResult.background: '{{values.color.statusBar}}90'
+  peekViewResult.lineForeground: '{{values.color.foreground}}'
+  peekViewResult.selectionBackground: '{{values.color.selection}}'
+  peekViewResult.selectionForeground: '{[values.color.selection}}'
+  peekViewEditor.background: '{{values.color.sideBar}}40'
+  peekViewTitle.background: '{{values.color.sideBar}}40'
+  peekView.border: '{{values.color.blue}}'
+  peekViewEditor.matchHighlightBackground: '{{values.color.orange}}55'
+  peekViewResult.fileForeground: '{{values.color.foreground}}'
+  peekViewResult.matchHighlightBackground: '{{values.color.orange}}70'
+  peekViewTitleLabel.foreground: '{{values.color.foreground}}'
+  peekViewTitleDescription.foreground: '{{values.color.comments}}'
+
+  # Terminal
+  terminal.ansiRed: '{{values.color.red}}'
+  terminal.ansiBrightRed: '{{values.color.red}}'
+  terminal.ansiYellow: '{{values.color.yellow}}'
+  terminal.ansiBrightYellow: '{{values.color.yellow}}'
+  terminal.ansiGreen: '{{values.color.green}}'
+  terminal.ansiBrightGreen: '{{values.color.green}}'
+  terminal.ansiBlue: '{{values.color.blue}}'
+  terminal.ansiBrightBlue: '{{values.color.blue}}'
+  terminal.ansiCyan: '{{values.color.cyan}}'
+  terminal.ansiBrightCyan: '{{values.color.cyan}}'
+  terminal.ansiMagenta: '{{values.color.purple}}'
+  terminal.ansiBrightMagenta: '{{values.color.purple}}'
+  terminal.ansiBlack: '{{values.color.background}}'
+  terminal.ansiBrightBlack: '{{values.color.comments}}'
+  terminal.ansiWhite: '{{values.color.foreground}}'
+  terminal.ansiBrightWhite: '{{values.color.foreground}}'

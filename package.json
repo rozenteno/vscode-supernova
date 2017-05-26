@@ -1,0 +1,48 @@
+{
+    "name": "supernova",
+    "displayName": "Supernova",
+    "description": "A dark and vibrant space theme.",
+    "version": "0.1.0",
+    "publisher": "tyrannicaltoucan",
+    "license": "MIT",
+    "icon": "images/icon.svg",
+    "scripts": {
+        "build": "node build.js"
+    },
+    "engines": {
+        "vscode": "^1.12.0"
+    },
+    "galleryBanner": {
+        "color": "#1b1d28",
+        "theme": "dark"
+    },
+    "contributes": {
+        "themes": [{
+            "label": "Supernova",
+            "uiTheme": "vs-dark",
+            "path": "./themes/supernova.json"
+        }]
+    },
+    "categories": [
+        "Themes"
+    ],
+    "keywords": [
+        "theme",
+        "color-theme",
+        "dark",
+        "space",
+        "supernova"
+    ],
+    "homepage": "https://github.com/tyrannicaltoucan/vscode-supernova/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tyrannicaltoucan/vscode-supernova.git"
+    },
+    "bugs": {
+        "url": "https://github.com/tyrannicaltoucan/vscode-supernova/issues"
+    },
+    "devDependencies": {
+        "mustache": "^2.3.0",
+        "yamljs": "^0.2.10"
+    }
+}
